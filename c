@@ -1,20 +1,25 @@
-#include <stdio.h>
+import java.util.*;
+import java.lang.*;
 
-int main() {
-    int N;
-    scanf("%d", &N);
+public class Looops {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-    int binary = 0;
-    int a = 0;
-    int place = 1;
+        int N = sc.nextInt();
+        int binary = 0;
+        int a = 0;
+        int place = 1;
+        while(N > 0){   
 
-    while (N > 0) {
-        binary = binary + (N % 2) * place;
-        N = N / 2;
-        place = place * 10;
+            binary = binary + (N % 2)*place;
+            N = N/2;
+            place = place * 10;
+            
+        }
+
+        System.out.println(binary);
+
+       
+
     }
-
-    printf("%d\n", binary);
-
-    return 0;
 }
